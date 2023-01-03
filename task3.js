@@ -62,9 +62,9 @@ const filterData = (nilaiAwal, nilaiAkhir, dataArray) => {
   }
 };
 
-seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]); //validasi 1
+seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]); // berhasil
+// seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]); //validasi 1
 // seleksiNilai(true, '8', undefined); // validasi 2
 // seleksiNilai(5, 17, [27, undefined, null]); // validasi 3
 // seleksiNilai(5, 17, [2, 25, 4]); // validasi 4
 // seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]); // nilai tidak ditemukan
-// seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]); // berhasil
