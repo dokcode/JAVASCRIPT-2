@@ -1,58 +1,73 @@
-let pijar = ['Siti', 'Furqon', 'Ichsan', 'Brandon', 'Taufik', 'Iqbal', 'Reza', 'Rhefa', 'Budi'];
+// Buat dan jelaskanlah 10 method bawaan JavaScript (Built-in
+//     Functions) beserta contoh penggunaannya(kecuali : split, reverse,
+//     join, foreach)
 
-// pop()
-// menghapus data dalam sebuah array di indeks terakhir
-pijar.pop();
-console.log(pijar);
+// 1. concat()
+// Menggabungkan dua array atau lebih
+const fruits = ['Apple', 'Mango', 'Pineapple'];
+const fruitsTwo = ['Lemon'];
+const fruitsThree = fruits.concat(fruitsTwo);
 
-// shift()
-// menghapus data dalam sebuah array di indeks pertama
-pijar.shift();
-console.log(pijar);
+// console.log(fruitsThree)
 
-// push()
-// menambahkan data baru ke data dalam sebuah array di indeks terakhir
-pijar.push('Vicko');
-console.log(pijar);
+// 2. includes()
+// Mengembalikan nilai true jika terdapat array yang ditentukan
+const cars = ['BMW', 'Toyota', 'Hyundai'];
+const isCars = cars.includes('Toyota', 1); // start
 
-// unshift()
-// menambahkan data baru ke data dalam sebuah array di indeks terakhir
-pijar.unshift(['Ainur', ['Alfath']]);
-console.log(pijar);
+// console.log(isCars);
 
-// flat()
-// mengurangi dimensi pada array multidimensi
-// dimensi yang dikurangi sesuai parameter yang dimasukkan
-// Infinity berarti membuat array menjadi satu dimensi berapa banyak pun dimensi awalnya
-pijar = pijar.flat(Infinity);
-console.log(pijar);
+// 3. indexOf()
+// Mengembalikan index pertama dari nilai yang ditentukan
+const stationary = ['Pencil', 'Bolpoint', 'Eraser'];
+const showStationary = stationary.indexOf('Pencil');
 
-// sort()
-// mengurutkan data pada sebuah array
-pijar.sort();
-console.log(pijar);
+// console.log(showStationary)
 
-// splice()
-// bisa digunakan untuk memotong sebuah data sebuah array
-// menghapus dan menambahkan data di indeks spesifik
-pijar.splice(5);
-console.log(pijar);
+// 4. isArray()
+// ? array
+const weather = ['Hot', 'Rain', 'Cloud', 'Sunny'];
+const isArr = Array.isArray(weather);
 
-const pi = 3.14;
-const planck = 6.62607015;
+// console.log(isArr);
 
-// Math.floor(), Math.ceil(), Math.round()
-// digunakan untuk membulatkan sebuah bilangan desimal menjadi bilangan bulat
-// floor untuk pembulatan ke bawah, ceil untuk pembulatan ke atas
-// dan round untuk pembulatan ke bilangan terdekat
-console.log(Math.round(pi));
-console.log(Math.round(planck));
+// 5. lastIndexOf()
+// Mengembalikan posisi index terakhir
+const month = ['January', 'February', 'March', 'April', 'May'];
+const indexOfMonth = month.lastIndexOf('January', 1); // start
 
-// Math.random()
-// mencetak angka random yang bernilai antara 0 - 1
-console.log(Math.random() * 10);
+// console.log(indexOfMonth);
 
-// Math.pow()
-// memangkatkan sebuah bilangan dengan parameter (a, b)
-// dimana a sebagai basis dan b sebagai eksponensial
-console.log(Math.pow(pi, 2));
+// 6. pop()
+// Menghapus element terakhir
+const musicalInstrument = ['Guiter', 'Drum', 'Piano'];
+const removeMusical = musicalInstrument.pop();
+
+// console.log(removeMusical);
+
+// 7. push()
+// Menambahkan item baru di akhir array
+const country = ['Indonesian', 'Malaysia', 'Singapore'];
+const addCountry = country.push('Vietnam');
+
+// console.log(country)
+//8.  Date
+let date = Date();
+console.log(date);
+console.log('\n');
+
+// console.log(revProvince);
+
+// 9. shift()
+// Menghapus item pertama
+const drink = ['Coffe', 'Juice', 'Milk'];
+const remDrink = drink.shift();
+
+// console.log(drink);
+
+// 10. unshift()
+// Menambahkan elements baru ke array
+const food = ['Fried rice', 'Grilled ribs', 'Soup'];
+const addFood = food.unshift('Chicken');
+
+// console.log(food);
