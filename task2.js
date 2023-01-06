@@ -13,26 +13,35 @@
 // Output:
 // [“Alexandra”,”Amanda”,”Angela”]
 
-const nama = ['Abigail', 'Alexandra', 'Alison', 'Amanda', 'Angela', 'Bella', 'Carol', 'Caroline', 'Carolyn', 'Deirdre', 'Diana', 'Elizabeth', 'Ella', 'Faith', 'Olivia', 'Penelope'];
-
-function cekData(string, number, callback) {
+let name = ['Abigail', 'Alexandra', 'Alison', 'Ammanda', 'Angela', 'Bella', 'Carol', 'Caroline', 'Carolyn', 'Deirdre', 'Diana', 'Elizabeth', 'Ella', 'Faith', 'Olivia', 'Penelope'];
+function cekData(str, num, cb) {
   try {
-    if (typeof string != 'string') throw 'inputkan data berupa string';
-    filterData(string, number, callback);
+    valInput(str);
+    valNum(num);
+    cb(str, num, tampilkan);
   } catch (err) {
     console.log(err);
   }
 }
-
-function filterData(string, number, callback) {
-  let result = nama.filter((nama) => nama.toLowerCase().indexOf(string.toLowerCase()) !== -1);
-  result = result.slice(0, number);
-  callback(result); //revisi, solved
+function output(str, num, cb) {
+  let result = name.filter((name) => name.toLowerCase().indexOf(str.toLowerCase()) !== -1);
+  result = result.slice(0, num);
+  if (result == '') {
+    console.log(`Nilai tidak ditemukan`);
+    return;
+  }
+  cb(result);
 }
-
-function callback(result) {
+function valInput(str) {
+  if (str == '') throw `input tidak boleh kosong`;
+  if (Number(str)) throw `input tidak boleh number`;
+}
+function valNum(num) {
+  if (num == '') throw `data tidak boleh kosong`;
+  if (!Number(num)) throw `data harus berupa string`;
+}
+function tampilkan(result) {
   console.log(result);
 }
 
-cekData('an', 3, callback);
-// cekData(4, 3, callback);
+cekData('an', 6, output);
