@@ -23,23 +23,19 @@
 // “Nilai tidak ditemukan”
 
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
-  // validasi nilaiAwal < nilaiAkhir
   if (nilaiAwal < nilaiAkhir) {
-    // validasi dataArray harus array
     if (typeof nilaiAwal === 'number' && typeof nilaiAkhir === 'number' && Array.isArray(dataArray)) {
-      // validasi semua elemen dalam dataArray harus bertipe number
       if (dataArray.every((item) => typeof item === 'number')) {
-        // validasi panjang dataArray > 5
         if (dataArray.length > 5) {
           filterData(nilaiAwal, nilaiAkhir, dataArray);
         } else {
-          console.log('Jumlah elemen dalam dataArray harus lebih dari 5');
+          console.log('Jumlah dataArray harus lebih dari 5');
         }
       } else {
-        console.log('Semua elemen dalam dataArray harus bertipe number');
+        console.log('Semua dataArray harus bertipe number');
       }
     } else {
-      console.log('Parameter pertama dan kedua harus bertipe number, lalu parameter ketiga harus bertipe array');
+      console.log('Parameter pertama dan kedua harus bertipe number, parameter ketiga harus bertipe array');
     }
   } else {
     console.log('Nilai akhir harus lebih besar dari nilai awal');
